@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="header-row">
+      <ion-col>Product</ion-col>
+      <ion-col>Quantity</ion-col>
+      <ion-col>Price</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let sale of selectedSales" class="data-row">
+      <ion-col>{{ sale.sales[0].product }}</ion-col>
+      <ion-col>{{ sale.sales[0].quantity }}</ion-col>
+      <ion-col>{{ sale.sales[0].price | currency }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Move the button outside the ion-grid block -->
+  <div class="button-container">
+    <ion-button expand="none" (click)="confirmSales()">Confirm</ion-button>
+  </div>
+</ion-content>

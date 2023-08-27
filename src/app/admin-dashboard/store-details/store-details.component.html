@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="weather-widget" *ngIf="weatherData">
+  <h2>{{ weatherData.name }}</h2>
+  <div class="weather-info">
+    <p>Temperature: {{ degree | number:'1.1-2' }} °C</p>
+    <p>Humidity: {{ weatherData.main.humidity }}%</p>
+    <p>Weather: {{ weatherData.weather[0].description }}</p>
+  </div>
+</div>
+
+<ion-content>
+  <ion-card *ngIf="store">
+    <ion-card-header>
+      <ion-card-title>{{ store.name }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div class="store-info" *ngIf="store">
+    <h3>Store Information</h3>
+    <p>Total Sales: {{ store.totalsales }}</p>
+  </div>
+
+  <div class="manager-info" *ngIf="store">
+    <h3>Store Manager Information</h3>
+    <p>Name: {{ store.storemanager }}</p>
+    <p>managerid: {{ store.managerid }}</p>
+    <p>managerpass: {{ store.managerpass }}</p>
+  </div>
+
+  <!-- Add the map container -->
+  <div id="map"></div>
+ 
+</ion-content>

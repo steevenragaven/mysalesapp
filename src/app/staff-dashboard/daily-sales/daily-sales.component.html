@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/staff"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Enter Daily Sales</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Enter Sales Details
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Product</ion-label>
+          <ion-input [(ngModel)]="newSale.product"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Quantity</ion-label>
+          <ion-input type="number" [(ngModel)]="newSale.quantity"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Price</ion-label>
+          <ion-input type="number" [(ngModel)]="newSale.price"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="block" (click)="addSale()">Add Sale</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="sales.length > 0">
+    <ion-card-header>
+      Entered Sales
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let sale of sales">
+          <ion-label>{{ sale.product }}</ion-label>
+          <ion-label slot="end">{{ sale.quantity }}</ion-label>
+          <ion-label slot="end">{{ sale.price | currency }}</ion-label>
+          <ion-label slot="end">{{ (sale.quantity * sale.price) | currency }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="block" (click)="confirmSales()">Confirm</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

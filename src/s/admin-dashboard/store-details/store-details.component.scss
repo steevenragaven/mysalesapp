@@ -1,0 +1,49 @@
+  /* Global styles... */
+
+  /* Weather widget styles */
+  .weather-widget {
+    background-color: rgb(159, 237, 255);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* ...Existing styles... */
+
+  /* Additional styles for the new content */
+  .store-info,
+  .manager-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .manager-info {
+    margin-top: 10px;
+  }
+
+  .weather-info p,
+  .store-info p,
+  .manager-info p {
+    margin: 10px 0;
+  }
+
+  /* Modern styles */
+  .store-info {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .manager-info {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .store-info h3,
+  .manager-info h3 {
+    color: #333;
+  }
+
+  .manager-info p {
+    color: #666;
+  }

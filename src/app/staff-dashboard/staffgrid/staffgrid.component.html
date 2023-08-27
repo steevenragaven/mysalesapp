@@ -1,0 +1,7 @@
+
+<div class="grid-container">
+  <div *ngFor="let item of gridItems" class="grid-item" (click)="navigateTo(item.route)">
+    <ion-icon [name]="item.icon" [color]="item.color"></ion-icon>
+    <span>{{ item.label }}</span>
+  </div>
+</div>

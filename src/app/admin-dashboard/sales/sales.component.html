@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Store unconfirmed sales</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="header-row">
+      <ion-col>Date</ion-col>
+      <ion-col>Total Sales</ion-col>
+      <ion-col>Transactions</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let daySummary of salesSummaries">
+      <ion-col [routerLink]="['/sales-detail', daySummary.date, daySummary.storeId]">
+        {{ daySummary.date | date: 'dd/MM/yyyy' }}
+      </ion-col>
+      <ion-col>{{ daySummary.totalSales | currency }}</ion-col>
+      <ion-col>{{ daySummary.transactions }}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

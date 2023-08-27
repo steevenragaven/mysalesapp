@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Close Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let store of stores" class="close-store-card">
+    <ion-card-header>
+      <ion-card-title>{{ store.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Store Manager: {{ store.storemanager }}</p>
+      <!-- Additional details -->
+      <p>Manager ID: {{ store.managerid }}</p>
+      <p>Manager Password: {{ store.managerpass }}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="danger" (click)="closeStore(store)">
+          Close Store
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="add-store-card">
+    <ion-card-header>
+      Store Details
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input [(ngModel)]="newStore.name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input [(ngModel)]="newStore.logo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input [(ngModel)]="newStore.phoneNumber" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Location</ion-label>
+        <ion-input [(ngModel)]="newStore.location" required></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" (click)="addNewStore()">Add Store</ion-button>
+</ion-content>

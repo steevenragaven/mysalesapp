@@ -1,0 +1,27 @@
+.ion-header {
+    
+    .toolbar-background {
+      background-color: #3498db; /* Custom color for navbar background */
+    }
+  
+    .navbar-title {
+      color: #fff; /* Custom color for navbar title */
+    }
+    margin-bottom: 20px;
+  }
+  
+.ion-menu {
+    .menu-title {
+      color: #333; /* Custom color for menu title */
+    }
+  
+    .list {
+      ion-item {
+        color: #666; /* Custom color for menu items */
+        ion-icon {
+          color: #3498db; /* Custom color for ion-icons in menu items */
+        }
+      }
+    }
+  }
+  

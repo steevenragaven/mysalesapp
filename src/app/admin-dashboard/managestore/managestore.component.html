@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Manage Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let store of stores">
+    <ion-card-header>
+      <ion-card-title>{{ store.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Store Manager: {{ store.storemanager }}</p>
+      <p>Manager ID: {{ store.managerid }}</p>
+      <p>Manager Password: {{ store.managerpass }}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="success" (click)="callStore(store.phoneNumber)">
+          <ion-icon name="call-outline"></ion-icon> Call
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="primary" (click)="toggleEdit()">
+          <ion-icon name="pencil-outline"></ion-icon> Edit
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- Display fields only when editing mode is on -->
+    <ion-input *ngIf="isEditing" type="text" [(ngModel)]="newStoreName" placeholder="New Manager Name"></ion-input>
+
+    <ion-input *ngIf="isEditing" type="text" [(ngModel)]="newName" placeholder="New Store Name"></ion-input>
+    <ion-input *ngIf="isEditing" type="text" [(ngModel)]="newManagerId" placeholder="New Manager ID"></ion-input>
+    <ion-input *ngIf="isEditing" type="password" [(ngModel)]="newManagerPassword" placeholder="New Manager Password"></ion-input>
+    <ion-button *ngIf="isEditing" expand="full" color="primary" (click)="editStore(+store.id)">
+      Save Changes
+    </ion-button>
+  </ion-card>
+</ion-content>

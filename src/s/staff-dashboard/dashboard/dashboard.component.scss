@@ -1,0 +1,33 @@
+/* admin-dashboard.component.scss */
+
+/* Basic layout styles for the admin dashboard container */
+:host {
+    display: block;
+    padding: 20px;
+    background-color: #f9f9f9; /* Set the background color for the admin dashboard */
+  }
+  
+  /* Styling the dashboard heading */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Heading text color */
+  }
+  
+  /* Styling the dashboard container */
+  .dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #fff; /* Set a background color for the dashboard container */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  /* Custom color variables */
+  $primary-color: #007bff; /* Blue */
+  $secondary-color: #ffc107; /* Yellow */
+  $accent-color: #28a745; /* Green */
+  

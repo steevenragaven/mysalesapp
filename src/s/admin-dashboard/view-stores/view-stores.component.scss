@@ -1,0 +1,47 @@
+/* view-stores.component.scss */
+
+/* Basic layout styles for the component container */
+:host {
+    display: block;
+    padding: 20px;
+  }
+  
+  /* Styling for the heading */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Heading text color */
+  }
+  
+  /* Styling for the store list */
+  .store-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Styling for each store item */
+  .store-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling for store name */
+  .store-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Styling for store sales */
+  .store-sales {
+    color: #007bff; /* Blue color for sales */
+  }
+  .active-link {
+    /* Define styles for the active link here */
+    background-color: lightblue;
+  }
+  

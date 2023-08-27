@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/sales"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sales details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="header-row">
+      <ion-col>Product</ion-col>
+      <ion-col>Quantity</ion-col>
+      <ion-col>Price</ion-col>
+    </ion-row>
+    <ng-container *ngFor="let sale of selectedSales">
+      <ion-row class="data-row" *ngFor="let saleEntry of sale.sales">
+        <ion-col>{{ saleEntry.product }}</ion-col>
+        <ion-col>{{ saleEntry.quantity }}</ion-col>
+        <ion-col>{{ saleEntry.price | currency }}</ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+
+  <!-- Move the button outside the ion-grid block -->
+  <div class="button-container">
+    <ion-button expand="none" (click)="confirmSales()">Confirm</ion-button>
+  </div>
+</ion-content>

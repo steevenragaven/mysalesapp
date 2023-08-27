@@ -1,0 +1,27 @@
+/* close-store.component.scss */
+
+ion-content {
+    --background: #f4f4f4; /* Set the background color for the content area */
+  }
+  
+  .close-store-card {
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  ion-card-content {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    --background: #e74c3c; /* Set the background color of the button */
+    --color: #ffffff; /* Set the text color of the button */
+    margin-top: 10px;
+  }
+  
